@@ -50,4 +50,5 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+  
 </Project>

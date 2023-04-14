@@ -9,11 +9,14 @@ namespace JobPortal.Controllers
     public class GetJobController : Controller
     {
         IConfiguration configuration;
+        SqlConnection conn;
+
         List<JobModel> jobs;
 
         public GetJobController(IConfiguration configuration)
         {
             this.configuration = configuration;
+            conn = new SqlConnection(configuration.GetConnectionString("dev1"));
         }
 
         [HttpGet]
@@ -23,20 +26,15 @@ namespace JobPortal.Controllers
 
             try
             {
-                string connectionString = "Data Source=5CG9445SKD;Initial Catalog = JobDB; Encrypt=False; Integrated Security=True";
-                SqlConnection conn = new SqlConnection(connectionString);
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
-
-                //Viewing
-                cmd.CommandText = "SELECT * FROM JOB JOIN COMPANY ON  JOB.COMPANYID = COMPANY.COMPANYID;";
+                cmd.CommandText = Queries.GetAllJobs;
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
                         JobModel obj = new JobModel();
-
                         obj.JOBID = (int)reader["JOBID"];
                         obj.ROLE = (string)reader["ROLE"];
                         obj.SALARY = Convert.ToInt32(reader["SALARY"]);
@@ -52,7 +50,10 @@ namespace JobPortal.Controllers
             {
                 Console.WriteLine(ex.Message);
             }
-           
+            finally
+            {
+                conn.Close();
+            }
             return jobs;
         }
 

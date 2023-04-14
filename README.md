@@ -1,31 +1,45 @@
-## Appointment Scheduler 
+## JOB project:
 
-Appointment Scheduler is a web-based software application developed in ASP.NET and various other technologies of .NET.
-The project aims at managing daily appointments in companies,enterprises and businesses. It is targeted for people such as business personals, employees,officers, etc. who need to keep record of all daily meetings; this online web software helps in effective management of their time.
+### Item Description
+This project is made in ASP.Net based on the topic of 
+the Online Job Portal. In this Project, you can search 
+for different types of jobs. This project covers all the 
+aspects of this website using MVC pattern.
 
-### About Appointment Scheduler Project:
-In ASP.NET Appointment Scheduler, users are required to register into the system with an application. Then, they can add, edit and update the appointment schedules after registration. The entire system works all around the world, provided there is internet service.
+
+3 modules in this project:-
+ - Job-Seeker Module
+- Admin Module
+- Employer Module
+
+
+### Admin Module Job Portal Project:-
+In the admin panel, we can manage the whole 
+site like adding, updating, deleting new categories, 
+subcategories, jobs. Viewing jobs placed by users on the site
 
 
 
-It includes adding notifications feature by which SMS can be sent about upcoming appointment’s date and time.
-Being a web-based project, Appointment Scheduler System allows registered users to store appointments in the web page of this project. This application uses various technologies of.NET such as ASP.NET , C# coding language,SQL Server  and use stored procedure.
 
-Here, ADO.NET is used to access the system database and all database manipulations are performed with stored procedures..
-The main aim of Appointment Scheduler is to help in appointment management,effective time management and keep track of meetings. 
-Adding, searching, modifying and deleting appointments are main tasks involved in this system.
+### Job Seeker Module of Job portal Project:-
 
-### Features:
-The key features of this proposed project are listed below. Many new features can be added into the system to make it more enhanced.
-User Registration cum Login/Logout
-Change password and password recovery facilities
-Add new appointments
-View list of all appointments
-  
+In the Job seeker module, the users who are
+looking for any job can easily search. 
+There are numerous theories and models. 
+Therefore, in this module, the user can find an 
+introduction to some of these core theories and their key ideas. 
+Similarly in this module, the user can search jobs by selecting Name, salary, company name
+similarly by functional area.
 
-### Feature 3
-Search for appointments
-List all upcoming/future appointments by date
-View list of users in Appointment Scheduler System
-Modify existing appointment details
-Delete existing/upcoming appointments (edited) 
+
+Additionally, there is a provision of searching the job by selecting an alphabet. For example, any user selects the alphabet “A” then all the results starting from alphabet A are shown to the user.
+
+### Employee Features:-
+Employee Features:-
+Add, Update and Delete Job Details:- On this page, employees
+can add job details. Through this employee, the employee can
+also update the details of a job.
+Manage Job Category:- we can manage some categories of jobs.
+Also, we can delete some categories if we are no longer
+which to keep that kind of category.
+Change Password:- User can change its current password.
