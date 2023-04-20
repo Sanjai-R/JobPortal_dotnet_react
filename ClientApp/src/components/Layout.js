@@ -1,20 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import NavMenu from './NavBar';
-import { Container, Divider, Flex } from '@chakra-ui/react';
+import NavMenu from "./NavBar";
+import { Flex } from "@chakra-ui/react";
 
 const Layout = (props) => {
   return (
-    <div>
+    <d>
       <NavMenu />
-      
-      <Flex px="10" py="2">
+      <Flex px="10" py="2" w="100%">
         {props.children}
       </Flex>
-
-
-    </div>
+    </d>
   );
-}
+};
 
 export default Layout;
